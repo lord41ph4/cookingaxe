@@ -8,6 +8,7 @@ module cooking.axe.world {
 	requires kotlin.stdlib;
 
 	exports com.axetrading.game.cookingaxe.world;
+	exports com.axetrading.game.cookingaxe.world.utils;
 
 	provides Item with Egg, PanCakeRecipe, ScrambledEggsRecipe;
 

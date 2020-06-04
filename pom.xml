@@ -29,6 +29,7 @@
     <module>ui</module>
     <module>world</module>
     <module>player</module>
+    <module>game</module>
   </modules>
 
   <dependencies>

@@ -13,15 +13,19 @@
   <dependencies>
     <dependency>
       <groupId>com.axetrading.game.cookingaxe</groupId>
-      <artifactId>world</artifactId>
+      <artifactId>core</artifactId>
       <version>1.0.0.0</version>
-      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.axetrading.game.cookingaxe</groupId>
+      <artifactId>ui</artifactId>
+      <version>1.0.0.0</version>
     </dependency>
   </dependencies>
 
-  <artifactId>ui</artifactId>
+  <artifactId>game</artifactId>
   <version>1.0.0.0</version>
   <packaging>jar</packaging>
 
-  <name>UI</name>
+  <name>Cooking Axe</name>
 </project>
