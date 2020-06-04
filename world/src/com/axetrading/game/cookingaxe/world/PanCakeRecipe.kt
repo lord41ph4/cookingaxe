@@ -1,9 +1,13 @@
 package com.axetrading.game.cookingaxe.world
 
 class PanCakeRecipe : Recipe {
-	override val ingredients: Map<Class<out Ingredient>, Int>
-		get() = mapOf(Egg::class.java to 3)
-	override val name: String
-		get() = "Recipe for tasty pancake!"
+
+	override fun getName(): String {
+		return "Recipe for tasty pancake!";
+	}
+
+	override fun getIngredients(): Map<Class<out Ingredient>, Int> {
+		return mapOf(Egg::class.java to 3)
+	}
 
 }
