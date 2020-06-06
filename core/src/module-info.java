@@ -7,6 +7,7 @@ module cooking.axe.core {
 	requires java.base;
 	requires kotlin.stdlib;
 	requires cooking.axe.world;
+	requires kotlinx.coroutines.core;
 
 	uses Player;
 	uses Recipe;
