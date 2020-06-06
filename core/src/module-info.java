@@ -1,5 +1,6 @@
-import com.axetrading.game.cookingaxe.world.Item;
+import com.axetrading.game.cookingaxe.world.Ingredient;
 import com.axetrading.game.cookingaxe.world.Player;
+import com.axetrading.game.cookingaxe.world.Recipe;
 
 module cooking.axe.core {
 
@@ -8,5 +9,6 @@ module cooking.axe.core {
 	requires cooking.axe.world;
 
 	uses Player;
-	uses Item;
+	uses Recipe;
+	uses Ingredient;
 }

@@ -1,5 +1,6 @@
-package com.axetrading.game.cookingaxe.world;
+package com.axetrading.game.cookingaxe.world.producer;
 
+import com.axetrading.game.cookingaxe.world.Positionable;
 import com.axetrading.game.cookingaxe.world.utils.Vector2d;
 
 public class Oven implements Positionable {

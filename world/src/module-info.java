@@ -1,7 +1,10 @@
-import com.axetrading.game.cookingaxe.world.Egg;
-import com.axetrading.game.cookingaxe.world.Item;
-import com.axetrading.game.cookingaxe.world.PanCakeRecipe;
-import com.axetrading.game.cookingaxe.world.ScrambledEggsRecipe;
+import com.axetrading.game.cookingaxe.world.Ingredient;
+import com.axetrading.game.cookingaxe.world.Recipe;
+import com.axetrading.game.cookingaxe.world.ingredients.Egg;
+import com.axetrading.game.cookingaxe.world.ingredients.EggWhite;
+import com.axetrading.game.cookingaxe.world.ingredients.EggYolk;
+import com.axetrading.game.cookingaxe.world.recipes.PanCakeRecipe;
+import com.axetrading.game.cookingaxe.world.recipes.ScrambledEggsRecipe;
 
 module cooking.axe.world {
 	requires annotations;
@@ -10,6 +13,7 @@ module cooking.axe.world {
 	exports com.axetrading.game.cookingaxe.world;
 	exports com.axetrading.game.cookingaxe.world.utils;
 
-	provides Item with Egg, PanCakeRecipe, ScrambledEggsRecipe;
+	provides Recipe with PanCakeRecipe, ScrambledEggsRecipe;
+	provides Ingredient with Egg, EggWhite, EggYolk;
 
 }
