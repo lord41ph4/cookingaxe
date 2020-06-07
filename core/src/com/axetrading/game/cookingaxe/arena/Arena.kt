@@ -4,16 +4,18 @@ import com.axetrading.game.cookingaxe.world.Action
 import com.axetrading.game.cookingaxe.world.Figure
 import com.axetrading.game.cookingaxe.world.Item
 import com.axetrading.game.cookingaxe.world.Player
+import com.axetrading.game.cookingaxe.world.Scenario
 import com.axetrading.game.cookingaxe.world.WorldMap
 import kotlinx.coroutines.Deferred
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 
 class Arena(
 		players: List<Player>,
-		val worldMap: WorldMap
+		val worldMap: WorldMap,
+		val scenario: Scenario
 ) {
 
 	private class MapInfo(
@@ -31,23 +33,25 @@ class Arena(
 
 	}
 
-	private val playerMaps: Map<Player, MapInfo> = players.associateBy({ player -> player }, { player -> MapInfo(player, worldMap) });
-
+	private val playerMaps: Map<Player, MapInfo> = players.associateBy({ player -> player }, { player -> MapInfo(player, this.worldMap) })
 
 	@ExperimentalCoroutinesApi
 	fun onTick() {
-		val playerActions: Map<Player, Deferred<Action>> = playerMaps.entries.associateBy({ entry -> entry.key }, { entry -> GlobalScope.async { entry.key.think(entry.value) } })
-			Thread.sleep(20);
+		runBlocking {
+			val playerActions: Map<Player, Deferred<Action>> = this@Arena.playerMaps.entries.associateBy({ entry -> entry.key }, { entry -> this.async(Dispatchers.Default) { entry.key.think(entry.value) } })
+			Thread.sleep(20)
 			for ((player, action) in playerActions) {
-				evaluate(player, action)
+				this@Arena.evaluate(player, action)
 			}
+		}
+
 	}
 
 	@ExperimentalCoroutinesApi
 	private fun evaluate(player: Player, action: Deferred<Action>) {
 		val toExecute = if (action.isCompleted && action.getCompletionExceptionOrNull() == null) action.getCompleted() else null
-		if (toExecute != null && isApplicable(player, toExecute)) {
-
+		if (toExecute != null && scenario.isAllowed(toExecute)) {
+			toExecute.perform(player, worldMap)
 		}
 	}
 

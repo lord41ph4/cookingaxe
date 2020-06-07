@@ -1,6 +1,9 @@
 package com.axetrading.game.cookingaxe.world;
 
-public interface Figure extends Movable, Ownable {
+/**
+ *
+ */
+public interface Figure extends Movable, Turnable, Ownable, Unique {
 
 	Action getAction();
 

@@ -1,6 +1,7 @@
 import com.axetrading.game.cookingaxe.world.Ingredient;
 import com.axetrading.game.cookingaxe.world.Player;
 import com.axetrading.game.cookingaxe.world.Recipe;
+import com.axetrading.game.cookingaxe.world.Scenario;
 
 module cooking.axe.core {
 
@@ -12,4 +13,5 @@ module cooking.axe.core {
 	uses Player;
 	uses Recipe;
 	uses Ingredient;
+	uses Scenario;
 }
