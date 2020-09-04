@@ -1,13 +1,13 @@
-import com.axetrading.game.cookingaxe.world.Ingredient;
-import com.axetrading.game.cookingaxe.world.Player;
-import com.axetrading.game.cookingaxe.world.Recipe;
-import com.axetrading.game.cookingaxe.world.Scenario;
+import com.axetrading.game.cookingaxe.universe.Ingredient;
+import com.axetrading.game.cookingaxe.universe.Player;
+import com.axetrading.game.cookingaxe.universe.Recipe;
+import com.axetrading.game.cookingaxe.universe.Scenario;
 
 module cooking.axe.core {
 
 	requires java.base;
 	requires kotlin.stdlib;
-	requires cooking.axe.world;
+	requires cooking.axe.universe;
 	requires kotlinx.coroutines.core;
 
 	uses Player;

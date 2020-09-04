@@ -1,7 +1,7 @@
 package com.axetrading.game.cookingaxe;
 
-import com.axetrading.game.cookingaxe.world.Figure;
-import com.axetrading.game.cookingaxe.world.WorldMap;
+import com.axetrading.game.cookingaxe.universe.Figure;
+import com.axetrading.game.cookingaxe.universe.WorldMap;
 
 public interface SceneModifier {
 

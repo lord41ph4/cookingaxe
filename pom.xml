@@ -11,22 +11,26 @@
   <name>Cooking Axe Parent</name>
   <properties>
     <version.software>1.0.0.0</version.software>
-    <version.maven.assembly>3.2.0</version.maven.assembly>
-
     <java.version>11</java.version>
-    <kotlin.version>1.3.71</kotlin.version>
-    <kotlinx.version>1.3.7</kotlinx.version>
+    <kotlin.version>1.4.0</kotlin.version>
+    <kotlinx.version>1.3.9</kotlinx.version>
     <kotlin.compiler.jvmTarget>${java.version}</kotlin.compiler.jvmTarget>
+    <junit-jupiter.version>5.6.2</junit-jupiter.version>
 
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
 
+    <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+    <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
+
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
 
   <modules>
     <module>core</module>
     <module>ui</module>
+    <module>universe</module>
     <module>world</module>
     <module>player</module>
     <module>game</module>
@@ -102,6 +106,9 @@
         <groupId>org.jetbrains.kotlin</groupId>
         <artifactId>kotlin-maven-plugin</artifactId>
         <version>${kotlin.version}</version>
+        <configuration>
+          <experimentalCoroutines>enable</experimentalCoroutines>
+        </configuration>
         <executions>
           <execution>
             <id>compile</id>
@@ -130,7 +137,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
+        <version>${maven-compiler-plugin.version}</version>
         <configuration>
           <source>${java.version}</source>
           <target>${java.version}</target>
@@ -161,6 +168,12 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven-surefire-plugin.version}</version>
       </plugin>
     </plugins>
   </build>

@@ -1,10 +1,11 @@
+import com.axetrading.game.cookingaxe.player.Human;
 import com.axetrading.game.cookingaxe.player.PanCakeJoe;
-import com.axetrading.game.cookingaxe.world.Player;
+import com.axetrading.game.cookingaxe.universe.Player;
 
 module cooking.axe.player {
 
-	requires cooking.axe.world;
+	requires transitive cooking.axe.universe;
 
-	provides Player with PanCakeJoe;
+	provides Player with PanCakeJoe, Human;
 
 }

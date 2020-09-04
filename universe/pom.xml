@@ -10,16 +10,11 @@
   </parent>
 
   <dependencies>
-    <dependency>
-      <groupId>com.axetrading.game.cookingaxe</groupId>
-      <artifactId>universe</artifactId>
-      <version>1.0.0.0</version>
-    </dependency>
   </dependencies>
 
-  <artifactId>basic-player</artifactId>
+  <artifactId>universe</artifactId>
   <version>1.0.0.0</version>
   <packaging>jar</packaging>
 
-  <name>Basic Player</name>
+  <name>Universe</name>
 </project>

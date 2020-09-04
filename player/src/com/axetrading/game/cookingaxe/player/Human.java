@@ -1,21 +1,19 @@
 package com.axetrading.game.cookingaxe.player;
 
-import com.axetrading.game.cookingaxe.world.Player;
+import java.util.List;
+
+import com.axetrading.game.cookingaxe.universe.Figure;
+import com.axetrading.game.cookingaxe.universe.Player;
+import com.axetrading.game.cookingaxe.universe.WorldMap;
 
 public class Human implements Player {
-
-	private String name;
-
-	public Human() {
-		this.name = "Human";
+	@Override
+	public String getName() {
+		return "Human";
 	}
 
 	@Override
-	public String getName() {
-		return this.name;
-	}
+	public void think(WorldMap worldMap, List<Figure> ownFigures) {
 
-	public void setName(String name) {
-		this.name = name;
 	}
 }

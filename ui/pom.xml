@@ -7,7 +7,6 @@
     <groupId>com.axetrading.game.cookingaxe</groupId>
     <artifactId>cooking-axe-parent</artifactId>
     <version>1.0.0.0</version>
-    <relativePath>../</relativePath>
   </parent>
 
   <dependencies>

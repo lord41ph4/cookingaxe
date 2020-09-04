@@ -1,19 +1,17 @@
-import com.axetrading.game.cookingaxe.world.BasicScenario;
-import com.axetrading.game.cookingaxe.world.Ingredient;
-import com.axetrading.game.cookingaxe.world.Recipe;
-import com.axetrading.game.cookingaxe.world.Scenario;
-import com.axetrading.game.cookingaxe.world.ingredients.Egg;
-import com.axetrading.game.cookingaxe.world.ingredients.EggWhite;
-import com.axetrading.game.cookingaxe.world.ingredients.EggYolk;
-import com.axetrading.game.cookingaxe.world.recipes.PanCakeRecipe;
-import com.axetrading.game.cookingaxe.world.recipes.ScrambledEggsRecipe;
+import com.axetrading.game.cookingaxe.universe.scenario.BasicScenario;
+import com.axetrading.game.cookingaxe.universe.Ingredient;
+import com.axetrading.game.cookingaxe.universe.Recipe;
+import com.axetrading.game.cookingaxe.universe.Scenario;
+import com.axetrading.game.cookingaxe.universe.ingredients.Egg;
+import com.axetrading.game.cookingaxe.universe.ingredients.EggWhite;
+import com.axetrading.game.cookingaxe.universe.ingredients.EggYolk;
+import com.axetrading.game.cookingaxe.universe.recipes.PanCakeRecipe;
+import com.axetrading.game.cookingaxe.universe.recipes.ScrambledEggsRecipe;
 
 module cooking.axe.world {
 	requires annotations;
 	requires kotlin.stdlib;
-
-	exports com.axetrading.game.cookingaxe.world;
-	exports com.axetrading.game.cookingaxe.world.utils;
+	requires transitive cooking.axe.universe;
 
 	provides Recipe with PanCakeRecipe, ScrambledEggsRecipe;
 	provides Ingredient with Egg, EggWhite, EggYolk;
