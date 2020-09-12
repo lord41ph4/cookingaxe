@@ -1,7 +1,5 @@
-import com.axetrading.game.cookingaxe.universe.scenario.BasicScenario;
 import com.axetrading.game.cookingaxe.universe.Ingredient;
 import com.axetrading.game.cookingaxe.universe.Recipe;
-import com.axetrading.game.cookingaxe.universe.Scenario;
 import com.axetrading.game.cookingaxe.universe.ingredients.Egg;
 import com.axetrading.game.cookingaxe.universe.ingredients.EggWhite;
 import com.axetrading.game.cookingaxe.universe.ingredients.EggYolk;
@@ -15,6 +13,5 @@ module cooking.axe.world {
 
 	provides Recipe with PanCakeRecipe, ScrambledEggsRecipe;
 	provides Ingredient with Egg, EggWhite, EggYolk;
-	provides Scenario with BasicScenario;
 
 }
