@@ -3,10 +3,9 @@ package com.axetrading.game.cookingaxe.arena
 import com.axetrading.game.cookingaxe.universe.Figure
 import com.axetrading.game.cookingaxe.universe.Unique
 import com.axetrading.game.cookingaxe.universe.Vector2d
-import com.axetrading.game.cookingaxe.universe.WorldMap
 import java.util.stream.Collectors
 
-class World : WorldMap {
+class World : MutableWorldMap {
 
 	private data class UniquePosition(var unique: Unique, var position: Vector2d)
 
@@ -31,7 +30,7 @@ class World : WorldMap {
 		return null
 	}
 
-	fun setPosition(figure: Figure, position: Vector2d) {
+	override fun setPosition(figure: Figure, position: Vector2d) {
 		val figurePosition = this.figures[figure.id]
 		figurePosition?.position = position
 	}

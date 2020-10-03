@@ -6,13 +6,17 @@ package com.axetrading.game.cookingaxe.universe;
 public interface Figure extends Positionable, Movable, Turnable, Ownable, Unique {
 
 	/**
-	 * @return current action the figure is performing
+	 * @return current action the figure is performing, by default no action
 	 */
-	Action getAction();
+	default Action getAction() {
+		return null;
+	}
 
 	/**
-	 * @return figures current inventory
+	 * @return figures current inventory, by default no inventory
 	 */
-	Inventory getInventory();
+	default Inventory getInventory() {
+		return null;
+	}
 
 }

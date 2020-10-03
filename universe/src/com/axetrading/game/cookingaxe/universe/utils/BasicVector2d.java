@@ -14,6 +14,10 @@ public class BasicVector2d implements Vector2d {
 		this.y = y.doubleValue();
 	}
 
+	public BasicVector2d(Vector2d toCopy) {
+		this(toCopy.getX(), toCopy.getY());
+	}
+
 	@Override
 	public double getX() {
 		return this.x;

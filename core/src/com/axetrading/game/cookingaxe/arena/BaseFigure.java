@@ -1,41 +1,40 @@
 package com.axetrading.game.cookingaxe.arena;
 
-import com.axetrading.game.cookingaxe.universe.Action;
 import com.axetrading.game.cookingaxe.universe.Figure;
-import com.axetrading.game.cookingaxe.universe.Inventory;
 import com.axetrading.game.cookingaxe.universe.Player;
 import com.axetrading.game.cookingaxe.universe.Vector2d;
 import com.axetrading.game.cookingaxe.universe.utils.BasicVector2d;
 
-public class TestFigure implements Figure {
+/**
+ * BaseFigure represents a movable Figure in the Game it already handles
+ * positioning, orientation and movement
+ */
+public class BaseFigure implements Figure {
 
+	private final long id;
 	private final Player owner;
+	private Vector2d position;
+	private Vector2d orientation;
+	private Vector2d direction;
 
-	public TestFigure() {
-		this(null);
-	}
-
-	public TestFigure(Player owner) {
+	public BaseFigure(long id, Player owner) {
+		this.id = id;
 		this.owner = owner;
 	}
 
 	@Override
-	public Action getAction() {
-		return null;
+	public long getId() {
+		return this.id;
 	}
 
 	@Override
-	public Inventory getInventory() {
-		return null;
-	}
-
-	@Override
-	public BasicVector2d getDirection() {
-		return null;
+	public Vector2d getDirection() {
+		return this.direction;
 	}
 
 	@Override
 	public void move(Vector2d direction) {
+		this.direction = new BasicVector2d(direction);
 	}
 
 	@Override
@@ -44,27 +43,22 @@ public class TestFigure implements Figure {
 	}
 
 	@Override
-	public BasicVector2d getPosition() {
-		return null;
+	public Vector2d getPosition() {
+		return this.position;
 	}
 
 	@Override
 	public void setPosition(Vector2d position) {
-
+		this.position = new BasicVector2d(position);
 	}
 
 	@Override
 	public Vector2d getOrientation() {
-		return null;
+		return this.orientation;
 	}
 
 	@Override
 	public void setOrientation(Vector2d orientation) {
-
-	}
-
-	@Override
-	public long getId() {
-		return 0;
+		this.orientation = new BasicVector2d(orientation);
 	}
 }

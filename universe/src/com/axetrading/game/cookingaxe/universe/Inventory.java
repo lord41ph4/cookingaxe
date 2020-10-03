@@ -1,11 +1,7 @@
 package com.axetrading.game.cookingaxe.universe;
 
-import java.util.List;
-
-public interface Inventory {
+public interface Inventory extends Container {
 
 	int capacity();
-
-	List<Item> contents();
 
 }

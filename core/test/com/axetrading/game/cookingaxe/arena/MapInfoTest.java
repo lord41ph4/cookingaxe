@@ -13,7 +13,7 @@ import com.axetrading.game.cookingaxe.universe.utils.BasicVector2d;
 public class MapInfoTest {
 
 	@Test
-	public void figuresOfMapInfoExposedAsImmutable() {
+	public void figures_of_MapInfo_exposed_as_immutable() {
 		MapInfo mapInfo = new MapInfo(new PanCakeJoe(), new World());
 		assertThrows(UnsupportedOperationException.class, () -> mapInfo.getFigures()
 				.add(new TestFigure()));
@@ -22,7 +22,7 @@ public class MapInfoTest {
 	}
 
 	@Test
-	public void changesOfFiguresInWorldAreReflectedInMapInfo() {
+	public void changes_of_figures_in_world_are_reflected_in_MapInfo() {
 		World world = new World();
 		MapInfo mapInfo = new MapInfo(new PanCakeJoe(), world);
 		assertThat(mapInfo.getFigures()
