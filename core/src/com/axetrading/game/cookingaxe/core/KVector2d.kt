@@ -1,4 +1,4 @@
-package com.axetrading.game.cookingaxe.arena
+package com.axetrading.game.cookingaxe.core
 
 import com.axetrading.game.cookingaxe.universe.Vector2d
 import kotlin.math.sqrt
@@ -102,5 +102,4 @@ class KVector2d(private var x: Double, private var y: Double) : Vector2d {
 		result = 31 * result + y.hashCode()
 		return result
 	}
-
 }

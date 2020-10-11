@@ -1,4 +1,4 @@
-package com.axetrading.game.cookingaxe.arena;
+package com.axetrading.game.cookingaxe.core;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-import com.axetrading.game.cookingaxe.arena.Arena.MapInfo;
+import com.axetrading.game.cookingaxe.core.Arena.MapInfo;
 import com.axetrading.game.cookingaxe.player.PanCakeJoe;
 
 public class MapInfoTest {
@@ -26,7 +26,7 @@ public class MapInfoTest {
 		MapInfo mapInfo = new MapInfo(new PanCakeJoe(), world);
 		assertThat(mapInfo.getFigures()
 				.size(), is(0));
-		world.place(new KVector2d(0, 0), new TestFigure());
+		world.place(new TestVector(0, 0), new TestFigure());
 		assertThat(mapInfo.getFigures()
 				.size(), is(1));
 	}

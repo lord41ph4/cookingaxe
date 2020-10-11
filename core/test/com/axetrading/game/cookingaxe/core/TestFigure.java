@@ -1,4 +1,4 @@
-package com.axetrading.game.cookingaxe.arena;
+package com.axetrading.game.cookingaxe.core;
 
 import com.axetrading.game.cookingaxe.universe.Action;
 import com.axetrading.game.cookingaxe.universe.Figure;

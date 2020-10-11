@@ -1,17 +1,17 @@
 @file:Suppress("JAVA_MODULE_DOES_NOT_DEPEND_ON_MODULE")
 
-package com.axetrading.game.cookingaxe.arena
+package com.axetrading.game.cookingaxe.core
 
+import com.axetrading.game.cookingaxe.universe.Vector2d
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.jupiter.api.Test
-import com.axetrading.game.cookingaxe.arena.KVector2d as Vector
 
 class MoveHandlerTest {
 
-	class MoveOnlyFigure(private val moveDirection: Vector) : TestFigure(null) {
+	class MoveOnlyFigure(private val moveDirection: Vector2d) : TestFigure(null) {
 
-		override fun getDirection(): Vector {
+		override fun getDirection(): Vector2d {
 			return this.moveDirection
 		}
 
@@ -25,9 +25,9 @@ class MoveHandlerTest {
 	@Test
 	fun `starting at (0,0) and moving in direction (1,1) results to position (1,1)`() {
 		val world = World()
-		val moveDirection = Vector(1, 1)
+		val moveDirection = TestVector(1, 1)
 		val figure = MoveOnlyFigure(moveDirection)
-		world.place(Vector(0, 0), figure)
+		world.place(TestVector(0, 0), figure)
 		val moveHandler = MoveHandler(world)
 		moveHandler.evaluate(figure)
 

@@ -1,6 +1,6 @@
 @file:Suppress("JAVA_MODULE_DOES_NOT_DEPEND_ON_MODULE")
 
-package com.axetrading.game.cookingaxe.arena
+package com.axetrading.game.cookingaxe.core
 
 import com.axetrading.game.cookingaxe.universe.Vector2d
 import org.hamcrest.CoreMatchers.`is`
@@ -12,7 +12,7 @@ import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.CsvSource
 import org.junit.jupiter.params.provider.ValueSource
 import kotlin.math.sqrt
-import com.axetrading.game.cookingaxe.arena.KVector2d as Vector
+import com.axetrading.game.cookingaxe.core.KVector2d as Vector
 
 class VectorTest {
 
@@ -30,7 +30,7 @@ class VectorTest {
 	fun `a vector can be created using another vector`() {
 		val x: Number = 1.337
 		val y: Number = 1337
-		val toCopy: Vector2d = Vector(x, y)
+		val toCopy: Vector2d = TestVector(x, y)
 		val vector: Vector2d = Vector(toCopy)
 
 		assertThat(vector.x, `is`(x.toDouble()))

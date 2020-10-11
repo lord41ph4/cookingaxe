@@ -1,6 +1,6 @@
 @file:Suppress("JAVA_MODULE_DOES_NOT_DEPEND_ON_MODULE")
 
-package com.axetrading.game.cookingaxe.arena
+package com.axetrading.game.cookingaxe.core
 
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.platform.runner.JUnitPlatform

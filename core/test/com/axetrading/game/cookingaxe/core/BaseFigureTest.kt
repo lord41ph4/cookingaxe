@@ -1,11 +1,11 @@
 @file:Suppress("JAVA_MODULE_DOES_NOT_DEPEND_ON_MODULE")
 
-package com.axetrading.game.cookingaxe.arena
+package com.axetrading.game.cookingaxe.core
 
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.jupiter.api.Test
-import com.axetrading.game.cookingaxe.arena.KVector2d as Vector
+import com.axetrading.game.cookingaxe.core.KVector2d as Vector
 
 class BaseFigureTest {
 
