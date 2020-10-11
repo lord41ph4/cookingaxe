@@ -5,12 +5,12 @@ package com.axetrading.game.cookingaxe.arena
 import com.axetrading.game.cookingaxe.universe.Figure
 import com.axetrading.game.cookingaxe.universe.Player
 import com.axetrading.game.cookingaxe.universe.WorldMap
-import com.axetrading.game.cookingaxe.universe.utils.BasicVector2d
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.jupiter.api.Test
 import kotlin.time.ExperimentalTime
+import com.axetrading.game.cookingaxe.arena.KVector2d as Vector
 
 @ExperimentalTime
 @ExperimentalCoroutinesApi
@@ -32,7 +32,7 @@ class ArenaTest {
 			override fun think(worldMap: WorldMap?, ownFigures: MutableList<Figure>?) {
 				if (ownFigures != null) {
 					for (i in 0 until ownFigures.size) {
-						ownFigures[i].move(BasicVector2d(1, 1))
+						ownFigures[i].move(Vector(1, 1))
 					}
 				}
 			}
@@ -40,13 +40,13 @@ class ArenaTest {
 		val figure = BaseFigure(0, player)
 		val world = World()
 
-		world.place(BasicVector2d(0, 0), figure)
+		world.place(Vector(0, 0), figure)
 
 
 		val arena = Arena(mutableListOf(player), world)
 		arena.onTick()
 
-		assertThat(figure.position, `is`(BasicVector2d(1, 1)))
+		assertThat(figure.position, `is`(Vector(1, 1)))
 	}
 
 }

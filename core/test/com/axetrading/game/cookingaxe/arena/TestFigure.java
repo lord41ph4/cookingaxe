@@ -5,7 +5,6 @@ import com.axetrading.game.cookingaxe.universe.Figure;
 import com.axetrading.game.cookingaxe.universe.Inventory;
 import com.axetrading.game.cookingaxe.universe.Player;
 import com.axetrading.game.cookingaxe.universe.Vector2d;
-import com.axetrading.game.cookingaxe.universe.utils.BasicVector2d;
 
 public class TestFigure implements Figure {
 
@@ -30,7 +29,7 @@ public class TestFigure implements Figure {
 	}
 
 	@Override
-	public BasicVector2d getDirection() {
+	public Vector2d getDirection() {
 		return null;
 	}
 
@@ -44,7 +43,7 @@ public class TestFigure implements Figure {
 	}
 
 	@Override
-	public BasicVector2d getPosition() {
+	public Vector2d getPosition() {
 		return null;
 	}
 

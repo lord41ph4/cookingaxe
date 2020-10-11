@@ -3,7 +3,6 @@ package com.axetrading.game.cookingaxe.arena;
 import com.axetrading.game.cookingaxe.universe.Figure;
 import com.axetrading.game.cookingaxe.universe.Player;
 import com.axetrading.game.cookingaxe.universe.Vector2d;
-import com.axetrading.game.cookingaxe.universe.utils.BasicVector2d;
 
 /**
  * BaseFigure represents a movable Figure in the Game it already handles
@@ -34,7 +33,7 @@ public class BaseFigure implements Figure {
 
 	@Override
 	public void move(Vector2d direction) {
-		this.direction = new BasicVector2d(direction);
+		this.direction = new KVector2d(direction);
 	}
 
 	@Override
@@ -49,7 +48,7 @@ public class BaseFigure implements Figure {
 
 	@Override
 	public void setPosition(Vector2d position) {
-		this.position = new BasicVector2d(position);
+		this.position = new KVector2d(position);
 	}
 
 	@Override
@@ -59,6 +58,6 @@ public class BaseFigure implements Figure {
 
 	@Override
 	public void setOrientation(Vector2d orientation) {
-		this.orientation = new BasicVector2d(orientation);
+		this.orientation = new KVector2d(orientation);
 	}
 }

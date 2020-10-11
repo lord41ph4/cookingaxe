@@ -11,5 +11,5 @@ import kotlin.time.ExperimentalTime
 @ExperimentalCoroutinesApi
 @ExperimentalTime
 @RunWith(JUnitPlatform::class)
-@SelectClasses(MapInfoTest::class, WorldTest::class, BasicVector2dTest::class, BaseFigureTest::class, MoveHandlerTest::class, ArenaTest::class)
+@SelectClasses(MapInfoTest::class, WorldTest::class, VectorTest::class, BaseFigureTest::class, MoveHandlerTest::class, ArenaTest::class)
 class BackendTests

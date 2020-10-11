@@ -3,12 +3,12 @@
 package com.axetrading.game.cookingaxe.arena
 
 import com.axetrading.game.cookingaxe.universe.Vector2d
-import com.axetrading.game.cookingaxe.universe.utils.BasicVector2d
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.CoreMatchers.nullValue
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.contains
 import org.junit.jupiter.api.Test
+import com.axetrading.game.cookingaxe.arena.KVector2d as Vector
 
 class WorldTest {
 
@@ -21,7 +21,7 @@ class WorldTest {
 	fun `Figures can be placed on a World`() {
 		val world = World()
 		val figure = TestFigure()
-		world.place(BasicVector2d(0, 0), figure)
+		world.place(Vector(0, 0), figure)
 		assertThat(world.figures, contains(figure))
 	}
 
@@ -29,7 +29,7 @@ class WorldTest {
 	fun `Positions of Figures can be queried`() {
 		val world = World()
 		val testFigure = TestFigure()
-		val testPosition = BasicVector2d(0, 0)
+		val testPosition = Vector(0, 0)
 		world.place(testPosition, testFigure)
 		val position: Vector2d? = world.getPosition(testFigure)
 		assertThat(position, `is`(testPosition))
@@ -54,10 +54,10 @@ class WorldTest {
 	fun `Positions of Figures can be set`() {
 		val world = World()
 		val testFigure = TestFigure()
-		val startPosition = BasicVector2d(0, 0)
+		val startPosition = Vector(0, 0)
 		world.place(startPosition, testFigure)
 
-		val position = BasicVector2d(1,1)
+		val position = Vector(1, 1)
 		world.setPosition(testFigure, position)
 		assertThat(world.getPosition(testFigure), `is`(position))
 	}
@@ -65,6 +65,6 @@ class WorldTest {
 	@Test
 	fun `Containers can be placed on a World`() {
 		val world = World()
-		world.place(BasicVector2d(0,0), TestContainer())
+		world.place(Vector(0, 0), TestContainer())
 	}
 }

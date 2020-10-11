@@ -5,7 +5,7 @@ package com.axetrading.game.cookingaxe.arena
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.jupiter.api.Test
-import com.axetrading.game.cookingaxe.universe.utils.BasicVector2d as Vector
+import com.axetrading.game.cookingaxe.arena.KVector2d as Vector
 
 class BaseFigureTest {
 

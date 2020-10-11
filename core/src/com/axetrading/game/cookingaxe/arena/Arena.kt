@@ -11,9 +11,8 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withTimeout
-import kotlin.time.DurationUnit
 import kotlin.time.ExperimentalTime
-import kotlin.time.toDuration
+import kotlin.time.seconds
 
 @ExperimentalTime
 @ExperimentalCoroutinesApi
@@ -47,7 +46,7 @@ class Arena(
 		runBlocking {
 			val playerActions: Map<Player, Deferred<List<Figure>>> = this@Arena.playerMaps.entries.associateBy({ entry -> entry.key }, { entry ->
 				this.async(Dispatchers.Default) {
-					withTimeout(2.toDuration(DurationUnit.SECONDS)) {
+					withTimeout(2.seconds) {
 						collectActions(entry)
 					}
 				}
@@ -73,5 +72,4 @@ class Arena(
 			figure.action?.perform(player, worldMap)
 		}
 	}
-
 }
