@@ -1,3 +1,3 @@
 module cooking.axe.universe {
-	exports com.axetrading.game.cookingaxe.universe;
+	exports de.alpha_zone.game.cookingaxe.universe;
 }

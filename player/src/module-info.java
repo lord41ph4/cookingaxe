@@ -1,6 +1,6 @@
-import com.axetrading.game.cookingaxe.player.Human;
-import com.axetrading.game.cookingaxe.player.PanCakeJoe;
-import com.axetrading.game.cookingaxe.universe.Player;
+import de.alpha_zone.game.cookingaxe.player.Human;
+import de.alpha_zone.game.cookingaxe.player.PanCakeJoe;
+import de.alpha_zone.game.cookingaxe.universe.Player;
 
 module cooking.axe.player {
 

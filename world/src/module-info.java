@@ -1,10 +1,10 @@
-import com.axetrading.game.cookingaxe.universe.Ingredient;
-import com.axetrading.game.cookingaxe.universe.Recipe;
-import com.axetrading.game.cookingaxe.universe.ingredients.Egg;
-import com.axetrading.game.cookingaxe.universe.ingredients.EggWhite;
-import com.axetrading.game.cookingaxe.universe.ingredients.EggYolk;
-import com.axetrading.game.cookingaxe.universe.recipes.PanCakeRecipe;
-import com.axetrading.game.cookingaxe.universe.recipes.ScrambledEggsRecipe;
+import de.alpha_zone.game.cookingaxe.universe.Ingredient;
+import de.alpha_zone.game.cookingaxe.universe.Recipe;
+import de.alpha_zone.game.cookingaxe.universe.ingredients.Egg;
+import de.alpha_zone.game.cookingaxe.universe.ingredients.EggWhite;
+import de.alpha_zone.game.cookingaxe.universe.ingredients.EggYolk;
+import de.alpha_zone.game.cookingaxe.universe.recipes.PanCakeRecipe;
+import de.alpha_zone.game.cookingaxe.universe.recipes.ScrambledEggsRecipe;
 
 module cooking.axe.world {
 	requires annotations;
